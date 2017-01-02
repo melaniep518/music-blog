@@ -1,26 +1,41 @@
 import React from 'react';
 import $ from 'jquery';
-import {guardianKey} from 'constants';
+import {guardianKey, nprKey} from 'constants';
 import {displayGuardianData} from 'apiActions';
+import GuardianArticle from 'GuardianArticle';
 
 const Home = React.createClass({
   componentDidMount: function() {
-    console.log('mounted')
     $.ajax({
       // add if else statement for api key
-      url: 'http://content.guardianapis.com/search?section=music&api-key=' + guardianKey,
       type: "GET",
+      url: 'http://content.guardianapis.com/search?section=music&api-key=' + guardianKey,
       success: function(content) {
-        console.log(content);
+        console.log('THE GUARDIAN', content);
         displayGuardianData(content);
+      }
+    })
+// Create redux action to render data
+    $.ajax({
+      type: 'GET',
+      url: 'http://api.npr.org/query?id=1106&apiKey=' + nprKey + '&format=json',
+      success: function(content) {
+        console.log('NPR', JSON.parse(content))
       }
     })
   },
 
   render: function() {
-    console.log('PROPS:', this.props);
     return (
-      <h1>This is the home page.</h1>
+      <div>
+        <h1>YOUR MUSIC NEWS</h1>
+          {this.props.guardianData.response ?
+            this.props.guardianData.response.results.map(function(val, idx) {
+              return (
+                <GuardianArticle key={idx} title={val.webTitle} date={val.webPublicationDate} content={val.webUrl} />
+              )
+            }) : null}
+      </div>
     )  
   }
 })

@@ -11,6 +11,7 @@ module.exports = {
   TasteTests: 'client/components/TasteTests',
   SeeingSounds: 'client/components/SeeingSounds',
   NewMusic: 'client/components/NewMusic',
+  GuardianArticle: 'client/components/GuardianArticle',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
 // STORE:
