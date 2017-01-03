@@ -12,6 +12,7 @@ module.exports = {
   SeeingSounds: 'client/components/SeeingSounds',
   NewMusic: 'client/components/NewMusic',
   GuardianArticle: 'client/components/GuardianArticle',
+  NPRArticle: 'client/components/NPRArticle',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
 // STORE:

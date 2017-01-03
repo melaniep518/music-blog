@@ -1,1 +1,3 @@
-export const GET_GUARDIAN_DATA = 'GET_GUARDIAN_DATA';
+export const GET_GUARDIAN_DATA = "GET_GUARDIAN_DATA";
+
+export const GET_NPR_DATA = "GET_NPR_DATA"

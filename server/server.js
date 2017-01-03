@@ -15,6 +15,8 @@ const routes = require('./routes/index').routes;
 
 app.use('/api/artists', routes.artist)
 app.use('/api/songs', routes.song)
+app.use('/api/votes', routes.vote)
+app.use('/api/comments', routes.comment)
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '../client/index.html'))

@@ -7,6 +7,12 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 100]
       }
+    },
+    url: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1, 250]
+      }
     }
   }, {
   	classMethods: {
