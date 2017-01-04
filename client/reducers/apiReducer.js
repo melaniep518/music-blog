@@ -1,6 +1,6 @@
 import {GET_GUARDIAN_DATA, GET_NPR_DATA} from 'actionTypes';
 
-const _init = {
+let _init = {
   guardianData: [],
   nprData: []
 }
