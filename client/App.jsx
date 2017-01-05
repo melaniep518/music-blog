@@ -13,6 +13,7 @@ import SeeingSounds from 'SeeingSounds';
 import NewMusic from 'NewMusic';
 
 import {CreatePlaylistContainer} from 'CreatePlaylistContainer';
+import {CreateSongContainer} from 'CreateSongContainer';
 
 const App = (props) => {
 	// console.log(props)
@@ -34,6 +35,7 @@ ReactDOM.render(
 				<Route path="hiddengems" component={HiddenGems}/>
 				<Route path="newmusic" component={NewMusic}/>
 				<Route path="createplaylist" component={CreatePlaylistContainer}/>
+				<Route path="createsong" component={CreateSongContainer}/>
 			</Route>
 		</Router>
 	</Provider>,

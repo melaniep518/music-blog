@@ -15,9 +15,11 @@ module.exports = {
   GuardianArticle: 'client/components/GuardianArticle',
   NPRArticle: 'client/components/NPRArticle',
   CreatePlaylist: 'client/components/CreatePlaylist',
+  CreateSong: 'client/components/CreateSong',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
   CreatePlaylistContainer: 'client/containers/CreatePlaylistContainer',
+  CreateSongContainer: 'client/containers/CreateSongContainer',
 // STORE:
   store: 'client/store',
 // REDUCERS:

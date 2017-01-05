@@ -36,7 +36,7 @@ function postNewArtist(req, res) {
 		name: req.body.name
 	})
 	.then(function(artist) {
-		console.log('REQ BODY:', req.body);
+		console.log('REQ BODY:', artist);
 		res.send('You have added a new artist')
 	})
 }

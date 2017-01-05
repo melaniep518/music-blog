@@ -3,3 +3,5 @@ export const GET_GUARDIAN_DATA = "GET_GUARDIAN_DATA";
 export const GET_NPR_DATA = "GET_NPR_DATA";
 
 export const CREATE_PLAYLIST = "CREATE_PLAYLIST";
+
+export const CREATE_SONG = "CREATE_SONG";

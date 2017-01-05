@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
   	classMethods: {
   		associate: function(models) {
-  			Playlist.belongsToMany(models.Song, {through: "playlistSongs"});
+  			Playlist.belongsToMany(models.Song, {through: "PlaylistSongs"});
         Playlist.hasMany(models.PlaylistVote, {as: "Votes"});
         Playlist.hasMany(models.PlaylistComment, {as: "Comments"});
   		}
