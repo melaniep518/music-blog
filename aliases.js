@@ -5,7 +5,10 @@ module.exports = {
 // CONSTANTS:
   constants: 'client/constants',
   actionTypes: 'client/actions/types',
+// FRONT END ROUTES:
+  Routes: 'client/Routes',
 // COMPONENTS:
+  App: 'client/App',
 	Navbar: 'client/components/Navbar',
 	Home: 'client/components/Home',
   HiddenGems: 'client/components/HiddenGems',
@@ -16,6 +19,10 @@ module.exports = {
   NPRArticle: 'client/components/NPRArticle',
   CreatePlaylist: 'client/components/CreatePlaylist',
   CreateSong: 'client/components/CreateSong',
+  CreateArtist: 'client/components/CreateArtist',
+  CreateGenre: 'client/components/CreateGenre',
+  CreateProducer: 'client/components/CreateProducer',
+  CreateAlbum: 'client/components/CreateProject',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
   CreatePlaylistContainer: 'client/containers/CreatePlaylistContainer',

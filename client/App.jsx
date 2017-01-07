@@ -6,12 +6,18 @@ import store from 'store';
 
 import Navbar from 'Navbar';
 import Home from 'Home';
-import {HomeContainer} from 'HomeContainer';
 import HiddenGems from 'HiddenGems';
 import TasteTests from 'TasteTests';
 import SeeingSounds from 'SeeingSounds';
 import NewMusic from 'NewMusic';
 
+
+import CreateArtist from 'CreateArtist';
+import CreateGenre from 'CreateGenre';
+import CreateProducer from 'CreateProducer';
+import CreateAlbum from 'CreateAlbum';
+
+import {HomeContainer} from 'HomeContainer';
 import {CreatePlaylistContainer} from 'CreatePlaylistContainer';
 import {CreateSongContainer} from 'CreateSongContainer';
 
@@ -36,6 +42,10 @@ ReactDOM.render(
 				<Route path="newmusic" component={NewMusic}/>
 				<Route path="createplaylist" component={CreatePlaylistContainer}/>
 				<Route path="createsong" component={CreateSongContainer}/>
+				<Route path="createartist" component={CreateArtist}/>
+				<Route path="creategenre" component={CreateGenre}/>
+				<Route path="createproducer" component={CreateProducer}/>
+				<Route path="createalbum" component={CreateAlbum}/>
 			</Route>
 		</Router>
 	</Provider>,
