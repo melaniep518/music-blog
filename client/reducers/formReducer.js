@@ -6,7 +6,8 @@ let _init = {
   playlistUrl: "",
   songTitle: "",
   songArtist: "",
-  songAlbum: ""
+  songAlbum: "",
+  releaseDate: ""
 }
 
 function formReducer(state = _init, action) {

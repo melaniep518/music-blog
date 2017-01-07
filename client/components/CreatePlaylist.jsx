@@ -5,6 +5,7 @@ import {createNewPlaylist} from 'formActions';
 
 const CreatePlaylist = (props) => {
 
+// clear input value on submit and display message that playlist has been added to db
   function handleSubmit(e) {
     // clear field onSubmit
     e.preventDefault();

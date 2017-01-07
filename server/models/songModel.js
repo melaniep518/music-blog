@@ -15,6 +15,7 @@ module.exports = function(sequelize, DataTypes) {
   			Song.belongsToMany(models.Playlist, {through: "PlaylistSongs"});
         Song.belongsToMany(models.Genre, {through: "SongGenres"});
         Song.belongsToMany(models.Producer, {through: "SongProducers"});
+        Song.belongsToMany(models.Artist, {through: "SongFeatures"});
   		}
   	}
   });

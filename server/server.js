@@ -26,7 +26,7 @@ app.get('/*', function(req, res) {
 
 
 
-db.sequelize.sync({force: true}).then(function() {
+db.sequelize.sync().then(function() {
   console.log('successful')
   app.listen(3000)
 })
