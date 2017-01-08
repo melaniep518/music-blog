@@ -3,7 +3,7 @@ import CreateSong from 'CreateSong';
 
 const mapStateToProps = state => ({
   songTitle: state.formReducer.songTitle,
-  songArtist: state.formReducer.songArtist,
+  artistName: state.formReducer.artistName,
   songAlbum: state.formReducer.songAlbum,
   releaseDate: state.formReducer.releaseDate
 });

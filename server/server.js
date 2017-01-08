@@ -18,6 +18,7 @@ app.use('/api/songs', routes.song)
 app.use('/api/votes', routes.vote)
 app.use('/api/comments', routes.comment)
 app.use('/api/playlists', routes.playlist)
+app.use('/api/genres', routes.genre)
 
 
 app.get('/*', function(req, res) {

@@ -10,7 +10,7 @@ const CreateSong = (props) => {
       url: '/api/songs',
       type: 'POST',
       data: {
-        artistName: props.songArtist,
+        artistName: props.artistName,
         songTitle: props.songTitle,
         projectName: props.songAlbum,
         releaseDate: props.releaseDate
@@ -29,7 +29,7 @@ const CreateSong = (props) => {
     <div>
       <form onSubmit={handleSubmit}>
         Song title: <input type="text" name="songTitle" placeholder="Song title"  onChange={handleChange}/><br/>
-        Song artist: <input type="text" name="songArtist" placeholder="Song artist" onChange={handleChange}/><br/>
+        Song artist: <input type="text" name="artistName" placeholder="Song artist" onChange={handleChange}/><br/>
         Song album: <input type="text" name="songAlbum" placeholder="Song album" onChange={handleChange}/><br/>
         Album release date: <input type="text" name="releaseDate" placeholder="Album release date" onChange={handleChange}/><br/>
         <input type="submit" name="createSongSubmit" value="Submit" />

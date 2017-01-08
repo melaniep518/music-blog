@@ -27,6 +27,8 @@ module.exports = {
   HomeContainer: 'client/containers/HomeContainer',
   CreatePlaylistContainer: 'client/containers/CreatePlaylistContainer',
   CreateSongContainer: 'client/containers/CreateSongContainer',
+  CreateArtistContainer: 'client/containers/CreateArtistContainer',
+  CreateGenreContainer: 'client/containers/CreateGenreContainer',
 // STORE:
   store: 'client/store',
 // REDUCERS:

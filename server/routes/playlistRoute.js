@@ -3,9 +3,11 @@ const Playlist = require('../models/index').Playlist;
 
 // ********** POST new playlist **********
 function postNewPlaylist(req, res) {
-  Playlist.create({
-    title: req.body.title,
-    url: req.body.url
+  Playlist.findOrCreate({
+    where: {
+      title: req.body.title,
+      url: req.body.url   
+    }
   })
   .then(function(playlist) {
     console.log('REQ BODY', req.body);

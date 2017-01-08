@@ -20,6 +20,8 @@ import CreateAlbum from 'CreateAlbum';
 import {HomeContainer} from 'HomeContainer';
 import {CreatePlaylistContainer} from 'CreatePlaylistContainer';
 import {CreateSongContainer} from 'CreateSongContainer';
+import {CreateArtistContainer} from 'CreateArtistContainer';
+import {CreateGenreContainer} from 'CreateGenreContainer';
 
 const App = (props) => {
 	// console.log(props)
@@ -42,8 +44,8 @@ ReactDOM.render(
 				<Route path="newmusic" component={NewMusic}/>
 				<Route path="createplaylist" component={CreatePlaylistContainer}/>
 				<Route path="createsong" component={CreateSongContainer}/>
-				<Route path="createartist" component={CreateArtist}/>
-				<Route path="creategenre" component={CreateGenre}/>
+				<Route path="createartist" component={CreateArtistContainer}/>
+				<Route path="creategenre" component={CreateGenreContainer}/>
 				<Route path="createproducer" component={CreateProducer}/>
 				<Route path="createalbum" component={CreateAlbum}/>
 			</Route>

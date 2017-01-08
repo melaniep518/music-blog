@@ -5,3 +5,7 @@ export const GET_NPR_DATA = "GET_NPR_DATA";
 export const CREATE_PLAYLIST = "CREATE_PLAYLIST";
 
 export const CREATE_SONG = "CREATE_SONG";
+
+export const CREATE_ARTIST = "CREATE_ARTIST";
+
+export const CREATE_GENRE = "CREATE_GENRE";

@@ -32,8 +32,10 @@ function deleteArtist(req, res) {
 
 // ********** POST new artist **********
 function postNewArtist(req, res) {
-	Artist.create({
-		name: req.body.name
+	Artist.findOrCreate({
+		where: {
+			name: req.body.artistName	
+		}
 	})
 	.then(function(artist) {
 		console.log('REQ BODY:', artist);
