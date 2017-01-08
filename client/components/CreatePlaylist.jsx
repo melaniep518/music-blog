@@ -16,7 +16,8 @@ const CreatePlaylist = (props) => {
         title: props.playlistTitle,
         url: props.playlistUrl
       }
-    })
+    });
+    console.log('New playlist found or created.');
   };
 
   function handleChange(e) {

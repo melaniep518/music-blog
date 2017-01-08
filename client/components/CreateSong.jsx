@@ -12,10 +12,11 @@ const CreateSong = (props) => {
       data: {
         artistName: props.artistName,
         songTitle: props.songTitle,
-        projectName: props.songAlbum,
+        albumName: props.albumName,
         releaseDate: props.releaseDate
       }
-    })
+    });
+    console.log('New song found or created.');
   };
 
   function handleChange(e) {
@@ -30,7 +31,7 @@ const CreateSong = (props) => {
       <form onSubmit={handleSubmit}>
         Song title: <input type="text" name="songTitle" placeholder="Song title"  onChange={handleChange}/><br/>
         Song artist: <input type="text" name="artistName" placeholder="Song artist" onChange={handleChange}/><br/>
-        Song album: <input type="text" name="songAlbum" placeholder="Song album" onChange={handleChange}/><br/>
+        Song album: <input type="text" name="albumName" placeholder="Song album" onChange={handleChange}/><br/>
         Album release date: <input type="text" name="releaseDate" placeholder="Album release date" onChange={handleChange}/><br/>
         <input type="submit" name="createSongSubmit" value="Submit" />
       </form>

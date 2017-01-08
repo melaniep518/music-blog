@@ -9,3 +9,7 @@ export const CREATE_SONG = "CREATE_SONG";
 export const CREATE_ARTIST = "CREATE_ARTIST";
 
 export const CREATE_GENRE = "CREATE_GENRE";
+
+export const CREATE_PRODUCER = "CREATE_PRODUCER";
+
+export const CREATE_ALBUM = "CREATE_ALBUM";

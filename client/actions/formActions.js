@@ -3,7 +3,9 @@ import store from 'store';
 import {CREATE_PLAYLIST, 
         CREATE_SONG, 
         CREATE_ARTIST,
-        CREATE_GENRE} from 'actionTypes';
+        CREATE_GENRE,
+        CREATE_PRODUCER,
+        CREATE_ALBUM} from 'actionTypes';
 
 export function createNewPlaylist(name, value) {
   store.dispatch({
@@ -34,5 +36,21 @@ export function createNewGenre(name, value) {
     type: CREATE_GENRE,
     name,
     value
-  })
-}
+  });
+};
+
+export function createNewProducer(name, value) {
+  store.dispatch({
+    type: CREATE_PRODUCER,
+    name,
+    value
+  });
+};
+
+export function createNewAlbum(name, value) {
+  store.dispatch({
+    type: CREATE_ALBUM,
+    name,
+    value
+  });
+};

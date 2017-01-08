@@ -2,8 +2,9 @@ const playlist = require('./playlistRoute');
 const artist = require('./artistRoute');
 const song = require('./songRoute');
 const vote = require('./voteRoute');
-const genre = require('./genreRoute');
 const comment = require('./commentRoute');
+const genre = require('./genreRoute');
+const producer = require('./producerRoute');
 
 module.exports = {
 	routes: {
@@ -12,6 +13,7 @@ module.exports = {
 		song,
     vote,
     comment,
-    genre
+    genre,
+    producer
 	}
 }

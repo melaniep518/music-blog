@@ -16,7 +16,7 @@ function postNewSong(req, res) {
 		console.log(artist);
 		Project.findOrCreate({
 			where: {
-				name: req.body.projectName,
+				name: req.body.albumName,
 				releaseDate: req.body.releaseDate,
 				ArtistId: artist[0].dataValues.id
 			}

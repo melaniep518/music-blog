@@ -29,6 +29,8 @@ module.exports = {
   CreateSongContainer: 'client/containers/CreateSongContainer',
   CreateArtistContainer: 'client/containers/CreateArtistContainer',
   CreateGenreContainer: 'client/containers/CreateGenreContainer',
+  CreateProducerContainer: 'client/containers/CreateProducerContainer',
+  CreateAlbumContainer: 'client/containers/CreateAlbumContainer',
 // STORE:
   store: 'client/store',
 // REDUCERS:

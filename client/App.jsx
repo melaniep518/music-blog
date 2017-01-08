@@ -12,16 +12,13 @@ import SeeingSounds from 'SeeingSounds';
 import NewMusic from 'NewMusic';
 
 
-import CreateArtist from 'CreateArtist';
-import CreateGenre from 'CreateGenre';
-import CreateProducer from 'CreateProducer';
-import CreateAlbum from 'CreateAlbum';
-
 import {HomeContainer} from 'HomeContainer';
 import {CreatePlaylistContainer} from 'CreatePlaylistContainer';
 import {CreateSongContainer} from 'CreateSongContainer';
 import {CreateArtistContainer} from 'CreateArtistContainer';
 import {CreateGenreContainer} from 'CreateGenreContainer';
+import {CreateProducerContainer} from 'CreateProducerContainer';
+import {CreateAlbumContainer} from 'CreateAlbumContainer';
 
 const App = (props) => {
 	// console.log(props)
@@ -46,8 +43,8 @@ ReactDOM.render(
 				<Route path="createsong" component={CreateSongContainer}/>
 				<Route path="createartist" component={CreateArtistContainer}/>
 				<Route path="creategenre" component={CreateGenreContainer}/>
-				<Route path="createproducer" component={CreateProducer}/>
-				<Route path="createalbum" component={CreateAlbum}/>
+				<Route path="createproducer" component={CreateProducerContainer}/>
+				<Route path="createalbum" component={CreateAlbumContainer}/>
 			</Route>
 		</Router>
 	</Provider>,
