@@ -76,8 +76,8 @@ function postNewArtist(req, res) {
 	})
 }
 
-// ********** PUT artist name **********
-function putArtistName(req, res) {
+// ********** PUT artist name by ID **********
+function putArtistNameById(req, res) {
 	Artist.update({
 		name: req.body.artistName
 	},
@@ -88,7 +88,21 @@ function putArtistName(req, res) {
 	})
 	.then(function(artist) {
 		console.log(artist)
-		res.send('Artist has been updated.')
+		res.send('Artist name has been updated.')
+	})
+}
+
+// ********** PUT artist name by name **********
+function putArtistNameByName(req, res) {
+	Artist.update({
+		name: req.body.artistName
+	}, {
+		where: {
+			name: req.params.name
+		}
+	})
+	.then(function(artist) {
+		res.send('Artist name has been updated.')
 	})
 }
 
@@ -96,12 +110,13 @@ function putArtistName(req, res) {
 router.route('/name/:name')
 	.delete(deleteArtistByName)
 	.get(getArtistByName)
+	.put(putArtistNameByName)
 	
 
 router.route('/id/:id')
 	.get(getArtistById)
 	.delete(deleteArtistById)
-	.put(putArtistName)
+	.put(putArtistNameById)
 
 router.route('/')
 	.get(getAllArtists)
