@@ -5,7 +5,16 @@ const Project = require('../models/index').Project;
 
 
 
-// ********** POST new song **********
+// ********** GET requests **********
+function getAllSongs(req, res) {
+	Song.findAll()
+	.then(function(songs) {
+		res.send(songs);
+	})
+}
+
+
+// ********** POST requests **********
 function postNewSong(req, res) {
 	Artist.findOrCreate({
 		where: {
@@ -44,7 +53,7 @@ function postNewSong(req, res) {
 // 	.delete(deleteSong)
 
 router.route('/')
-	// .get(getAllSongs)
+	.get(getAllSongs)
 	.post(postNewSong)
 
 module.exports = router;
