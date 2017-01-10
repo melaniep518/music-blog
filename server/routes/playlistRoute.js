@@ -81,7 +81,7 @@ function addSongToPlaylist(req, res) {
   })
   .then(function(playlist) {
     // console.log(playlist);
-    playlist.addSong([req.body.song])
+    playlist.addSong([req.params.songId])
   })
   .then(function() {
     console.log('Song has been added to playlist.');
@@ -132,7 +132,7 @@ router.route('/id/:id')
   .delete(deletePlaylistById)
   .put(putPlaylistTitleById)
 
-router.route('/song')
+router.route('/song/:songId')
   .post(addSongToPlaylist)
   // .delete(removeSongFromPlaylist)
 
