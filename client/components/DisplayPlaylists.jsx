@@ -8,6 +8,7 @@ import SinglePlaylist from 'SinglePlaylist';
 const DisplayPlaylist = React.createClass({
   
   componentDidMount: function() {
+    // console.log('Mount');
     $.ajax({
       url: '/api/playlists/',
       type: 'GET'
