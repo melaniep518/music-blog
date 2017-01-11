@@ -19,15 +19,24 @@ import {CreateArtistContainer} from 'CreateArtistContainer';
 import {CreateGenreContainer} from 'CreateGenreContainer';
 import {CreateProducerContainer} from 'CreateProducerContainer';
 import {CreateAlbumContainer} from 'CreateAlbumContainer';
+import {DisplayPlaylistsContainer} from 'DisplayPlaylistsContainer';
 
 const App = (props) => {
-	// console.log(props)
-		return (
+	const {create, display} = props;
+	return (
+		<div>
 			<div>
 				<Navbar/>
 				{props.children}
 			</div>
-		)	
+			<div>
+				{create}
+			</div>
+			<div>
+				{display}
+			</div>
+		</div>
+	)	
 }
 
 ReactDOM.render(
@@ -39,7 +48,10 @@ ReactDOM.render(
 				<Route path="seeingsounds" component={SeeingSounds}/>
 				<Route path="hiddengems" component={HiddenGems}/>
 				<Route path="newmusic" component={NewMusic}/>
-				<Route path="createplaylist" component={CreatePlaylistContainer}/>
+				<Route path="createplaylist" components={
+					{create: CreatePlaylistContainer, 
+					display: DisplayPlaylistsContainer}
+				}/>
 				<Route path="createsong" component={CreateSongContainer}/>
 				<Route path="createartist" component={CreateArtistContainer}/>
 				<Route path="creategenre" component={CreateGenreContainer}/>
