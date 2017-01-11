@@ -21,6 +21,16 @@ function deletePlaylistByTitle(req, res) {
   })
 }
 
+function removeSongFromPlaylist(req, res) {
+  Playlist.findById(req.params.playlistId)
+  .then(function(playlist) {
+    playlist.removeSong(req.params.songId)
+  })
+  .then(function() {
+    res.send('Song has been removed.')
+  })
+}
+
 function deletePlaylistById(req, res) {
   Playlist.destroy({
     where: {
@@ -34,7 +44,9 @@ function deletePlaylistById(req, res) {
 
 // ********** GET requests **********
 function getAllPlaylists(req, res) {
-  Playlist.findAll()
+  Playlist.findAll({
+    order: ['title']
+  })
   .then(function(playlist) {
     console.log(playlist);
     res.send(playlist);
@@ -74,11 +86,7 @@ function postNewPlaylist(req, res) {
 }
 
 function addSongToPlaylist(req, res) {
-  Playlist.findOne({
-    where: {
-      title: req.body.title
-    }
-  })
+  Playlist.findById(req.params.playlistId)
   .then(function(playlist) {
     // console.log(playlist);
     playlist.addSong([req.params.songId])
@@ -133,9 +141,9 @@ router.route('/id/:id')
   .delete(deletePlaylistById)
   .put(putPlaylistTitleById)
 
-router.route('/song/:songId')
+router.route('/song/:songId/:playlistId')
   .post(addSongToPlaylist)
-  // .delete(removeSongFromPlaylist)
+  .delete(removeSongFromPlaylist)
 
 
 module.exports = router;

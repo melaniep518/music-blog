@@ -18,8 +18,8 @@ module.exports = function(sequelize, DataTypes) {
   	classMethods: {
   		associate: function(models) {
   			Playlist.belongsToMany(models.Song, {through: "PlaylistSongs"});
-        Playlist.hasMany(models.PlaylistVote, {as: "Votes"});
-        Playlist.hasMany(models.PlaylistComment, {as: "Comments"});
+        Playlist.hasMany(models.PlaylistVote);
+        Playlist.hasMany(models.PlaylistComment);
   		}
   	}
   });
