@@ -3,6 +3,7 @@ module.exports = {
   apiActions: 'client/actions/apiActions',
   formActions: 'client/actions/formActions',
   playlistActions: 'client/actions/playlistActions',
+  songActions: 'client/actions/songActions',
 // CONSTANTS:
   constants: 'client/constants',
   actionTypes: 'client/actions/types',
@@ -26,6 +27,8 @@ module.exports = {
   CreateAlbum: 'client/components/CreateProject',
   DisplayPlaylists: 'client/components/DisplayPlaylists',
   SinglePlaylist: 'client/components/SinglePlaylist',
+  SingleSong: 'client/components/SingleSong',
+  DisplayAllSongs: 'client/components/DisplayAllSongs',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
   CreatePlaylistContainer: 'client/containers/CreatePlaylistContainer',
@@ -35,11 +38,13 @@ module.exports = {
   CreateProducerContainer: 'client/containers/CreateProducerContainer',
   CreateAlbumContainer: 'client/containers/CreateAlbumContainer',
   DisplayPlaylistsContainer: 'client/containers/DisplayPlaylistsContainer',
+  DisplayAllSongsContainer: 'client/containers/DisplayAllSongsContainer',
 // STORE:
   store: 'client/store',
 // REDUCERS:
   rootReducer: 'client/reducers/rootReducers',
   apiReducer: 'client/reducers/apiReducer',
   formReducer: 'client/reducers/formReducer',
-  playlistReducer: 'client/reducers/playlistReducer'
+  playlistReducer: 'client/reducers/playlistReducer',
+  songReducer: 'client/reducers/songReducer'
 }

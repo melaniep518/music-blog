@@ -71,6 +71,17 @@ function getPlaylistById(req, res) {
   });
 };
 
+function getSongsForOnePlaylist(req, res) {
+  Playlist.findById(req.params.playlistId)
+  .then(function(playlist) {
+    return playlist.getSongs()
+  })
+  .then(function(songs) {
+    res.send(songs);
+  })
+}
+
+
 // ********** POST requests **********
 function postNewPlaylist(req, res) {
   Playlist.findOrCreate({
@@ -145,5 +156,7 @@ router.route('/song/:songId/:playlistId')
   .post(addSongToPlaylist)
   .delete(removeSongFromPlaylist)
 
+router.route('/songs/:playlistId')
+  .get(getSongsForOnePlaylist)
 
 module.exports = router;

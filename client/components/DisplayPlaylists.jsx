@@ -23,10 +23,15 @@ const DisplayPlaylist = React.createClass({
     console.log('PROPS:', this.props.playlists);
     return (
       <div>
-        <h1>All Playlists:</h1>
-        {this.props.playlists ? this.props.playlists.map(function(val, idx) {
-          return <SinglePlaylist key={idx} createdAt={val.createdAt} id={val.id} title={val.title} url={val.url} />
-        }) : null}
+        <h5>All Playlists:</h5>
+        <form>
+          <input list="playlists" name="playlist"/>
+          <datalist id="playlists">
+            {this.props.playlists ? this.props.playlists.map(function(val, idx) {
+              return <SinglePlaylist key={idx} createdAt={val.createdAt} id={val.id} title={val.title} url={val.url} />
+            }) : null}
+          </datalist>
+        </form>
       </div>
     )
   }
