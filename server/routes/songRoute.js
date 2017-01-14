@@ -13,6 +13,14 @@ function getAllSongs(req, res) {
 	})
 }
 
+function getSongsWithAlbumAndArtistData(req, res) {
+	Song.findAll({
+		include: [Artist, Project]
+	})
+	.then(function(songsWithData) {
+		res.send(songsWithData)
+	})
+}
 
 // ********** POST requests **********
 function postNewSong(req, res) {
@@ -50,7 +58,14 @@ function postNewSong(req, res) {
 // ********** ROUTES **********
 // router.route('/:id')
 // 	.get(getSongById)
-// 	.delete(deleteSong)
+// 	.delete(deleteSongById)
+
+// router.route('/:name')
+// .get(getSongByName)
+// .delete(deleteSongByName)
+
+router.route('/populated')
+	.get(getSongsWithAlbumAndArtistData)
 
 router.route('/')
 	.get(getAllSongs)
