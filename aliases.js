@@ -24,7 +24,7 @@ module.exports = {
   CreateArtist: 'client/components/CreateArtist',
   CreateGenre: 'client/components/CreateGenre',
   CreateProducer: 'client/components/CreateProducer',
-  CreateAlbum: 'client/components/CreateProject',
+  CreateAlbum: 'client/components/CreateAlbum',
   DisplayPlaylists: 'client/components/DisplayPlaylists',
   SinglePlaylist: 'client/components/SinglePlaylist',
   SingleSong: 'client/components/SingleSong',

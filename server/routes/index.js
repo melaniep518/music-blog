@@ -5,6 +5,7 @@ const vote = require('./voteRoute');
 const comment = require('./commentRoute');
 const genre = require('./genreRoute');
 const producer = require('./producerRoute');
+const album = require('./albumRoute');
 
 module.exports = {
 	routes: {
@@ -14,6 +15,7 @@ module.exports = {
     vote,
     comment,
     genre,
-    producer
+    producer,
+    album
 	}
 }

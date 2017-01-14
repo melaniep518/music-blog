@@ -20,6 +20,7 @@ app.use('/api/comments', routes.comment)
 app.use('/api/playlists', routes.playlist)
 app.use('/api/genres', routes.genre)
 app.use('/api/producers', routes.producer)
+app.use('/api/albums', routes.album)
 
 
 app.get('/*', function(req, res) {
