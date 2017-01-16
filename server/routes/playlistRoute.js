@@ -43,7 +43,7 @@ function deletePlaylistById(req, res) {
 }
 
 // ********** GET requests **********
-function getAllPlaylists(req, res) {
+function getAllPlaylistsAlphabetically(req, res) {
   Playlist.findAll({
     order: ['title']
   })
@@ -132,7 +132,7 @@ function putPlaylistTitleById(req, res) {
       id: req.params.id
     }
   })
-  .then(function(playlist) {
+  .then(function() {
     res.send('Playlist title has been updated.')
   })
 }
@@ -140,7 +140,9 @@ function putPlaylistTitleById(req, res) {
 // ********** ROUTES **********
 router.route('/')
   .post(postNewPlaylist)
-  .get(getAllPlaylists)
+
+router.route('/title')
+  .get(getAllPlaylistsAlphabetically)
 
 router.route('/title/:title')
   .delete(deletePlaylistByTitle)

@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
   	classMethods: {
   		associate: function(models) {
   			Project.hasMany(models.Song, {as: 'Tracks'});
+        Project.belongsTo(models.Artist);
   		}
   	}
   });

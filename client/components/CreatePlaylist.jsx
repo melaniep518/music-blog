@@ -20,7 +20,7 @@ const CreatePlaylist = React.createClass({
     .done(function() {
       console.log('POST request sent.')
       $.ajax({
-        url: '/api/playlists/',
+        url: '/api/playlists/title',
         type: 'GET'
       })
       .done(function(playlists) {

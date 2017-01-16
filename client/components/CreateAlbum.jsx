@@ -24,7 +24,7 @@ const CreateAlbum = (props) => {
   function handleChange(e) {
     let name = e.target.name;
     let value = e.target.value;
-    console.log(props[name]);
+    // console.log(props[name]);
     createNewAlbum(name, value);
   };
 

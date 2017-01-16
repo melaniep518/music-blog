@@ -10,7 +10,7 @@ const DisplayPlaylist = React.createClass({
   componentDidMount: function() {
     // console.log('Mount');
     $.ajax({
-      url: '/api/playlists/',
+      url: '/api/playlists/title',
       type: 'GET'
     })
     .done(function(playlists) {

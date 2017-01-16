@@ -11,24 +11,24 @@ const Home = React.createClass({
       // add if else statement for api key
       type: "GET",
       url: 'http://content.guardianapis.com/search?section=music&api-key=' + guardianKey,
-      success: function(content) {
-        console.log('THE GUARDIAN', content);
+    })
+    .done(function(content) {
+        // console.log('THE GUARDIAN', content);
         displayGuardianData(content);
-      }
     })
 
     $.ajax({
       type: 'GET',
       url: 'http://api.npr.org/query?id=1106&apiKey=' + nprKey + '&format=json',
-      success: function(content) {
-        console.log('NPR', JSON.parse(content));
+    })
+    .done(function(content) {
+        // console.log('NPR', JSON.parse(content));
         displayNPRData(JSON.parse(content));
-      }
     })
   },
 
   render: function() {
-    console.log("NPR DATA: ", this.props.nprData.list)
+    // console.log("NPR DATA: ", this.props.nprData.list)
     return (
       <div>
         <h1>MUSIC NEWS FROM THE GUARDIAN</h1>
