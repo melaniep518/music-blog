@@ -15,8 +15,8 @@ const DisplayAllSongs = React.createClass({
     })
   },
 
-  handleClick: function() {
-    console.log('song test')
+  handleClick: function(e) {
+    // console.log('test')
   },
 
   render: function() {

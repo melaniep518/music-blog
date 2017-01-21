@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const Playlist = require('../models/index').Playlist;
 const Song = require('../models/index').Song;
+const Artist = require('../models/index').Artist;
 
 // ********** DELETE requests **********
 function deletePlaylistByTitle(req, res) {
@@ -74,7 +75,9 @@ function getPlaylistById(req, res) {
 function getSongsForOnePlaylist(req, res) {
   Playlist.findById(req.params.playlistId)
   .then(function(playlist) {
-    return playlist.getSongs()
+    return playlist.getSongs({
+      include: [Artist]
+    })
   })
   .then(function(songs) {
     res.send(songs);

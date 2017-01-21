@@ -21,9 +21,10 @@ import {CreateProducerContainer} from 'CreateProducerContainer';
 import {CreateAlbumContainer} from 'CreateAlbumContainer';
 import {DisplayPlaylistsContainer} from 'DisplayPlaylistsContainer';
 import {DisplayAllSongsContainer} from 'DisplayAllSongsContainer';
+import {SinglePlaylistSongsContainer} from 'SinglePlaylistSongsContainer';
 
 const App = (props) => {
-	const {create, playlists, songs} = props;
+	const {create, playlists, songs, playlistSongs} = props;
 	return (
 		<div>
 			<div>
@@ -36,6 +37,7 @@ const App = (props) => {
 			<div>
 				{playlists}
 				{songs}
+				{playlistSongs}
 			</div>
 		</div>
 	)	
@@ -53,7 +55,8 @@ ReactDOM.render(
 				<Route path="createplaylist" components={
 					{create: CreatePlaylistContainer, 
 					playlists: DisplayPlaylistsContainer,
-					songs: DisplayAllSongsContainer}
+					songs: DisplayAllSongsContainer,
+					playlistSongs: SinglePlaylistSongsContainer}
 				}/>
 				<Route path="createsong" component={CreateSongContainer}/>
 				<Route path="createartist" component={CreateArtistContainer}/>

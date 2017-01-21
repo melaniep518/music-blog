@@ -29,6 +29,7 @@ module.exports = {
   SinglePlaylist: 'client/components/SinglePlaylist',
   SingleSong: 'client/components/SingleSong',
   DisplayAllSongs: 'client/components/DisplayAllSongs',
+  SinglePlaylistSongs: 'client/components/SinglePlaylistSongs',
 // CONTAINERS: 
   HomeContainer: 'client/containers/HomeContainer',
   CreatePlaylistContainer: 'client/containers/CreatePlaylistContainer',
@@ -39,6 +40,7 @@ module.exports = {
   CreateAlbumContainer: 'client/containers/CreateAlbumContainer',
   DisplayPlaylistsContainer: 'client/containers/DisplayPlaylistsContainer',
   DisplayAllSongsContainer: 'client/containers/DisplayAllSongsContainer',
+  SinglePlaylistSongsContainer: 'client/containers/SinglePlaylistSongsContainer',
 // STORE:
   store: 'client/store',
 // REDUCERS:
