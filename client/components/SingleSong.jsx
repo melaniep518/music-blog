@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleSong = (props) => {
   return (
-    <option>{props.title}</option>
+    <li onClick={props.handleSongClick}>{props.title} -- {props.artist}</li>
   )
 }
 

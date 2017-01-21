@@ -7,8 +7,12 @@ const SinglePlaylist = (props) => {
   // in displaySongs component onClick will send 2 AJAX requests, first a POST to update the DB and add song to playlist
   // then a GET to retrieve updated playlist and update the state which will trigger a re-render of the playlist songs
   // allowing the list to show updates in real time
+  function handleClick(e) {
+    console.log(e.target)
+  }
+
   return(
-    <option>{props.title}</option>
+    <li onClick={props.handlePlaylistClick}>{props.title}</li>
   )
 };
 

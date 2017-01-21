@@ -10,12 +10,12 @@ const album = require('./albumRoute');
 module.exports = {
 	routes: {
     playlist,
-		artist,
-		song,
+    artist,
+    song,
     vote,
     comment,
     genre,
     producer,
     album
-	}
+  }
 }

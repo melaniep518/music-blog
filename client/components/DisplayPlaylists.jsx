@@ -19,22 +19,26 @@ const DisplayPlaylist = React.createClass({
     })
   },
 
+  handleClick: function(e) {
+    console.log('test');
+  },
+
   render: function() {
     console.log('PROPS:', this.props.playlists);
+    let that = this;
     return (
       <div>
         <h5>All Playlists:</h5>
-        <form>
-          <input list="playlists" name="playlist"/>
-          <datalist id="playlists">
+          <ul id="playlists">
             {this.props.playlists ? this.props.playlists.map(function(val, idx) {
-              return <SinglePlaylist key={idx} createdAt={val.createdAt} id={val.id} title={val.title} url={val.url} />
-            }) : null}
-          </datalist>
-        </form>
+              return <SinglePlaylist key={idx} createdAt={val.createdAt} id={val.id} title={val.title} url={val.url} handlePlaylistClick={this.handleClick}/>          
+              }, this) : null}
+          </ul>
       </div>
     )
   }
 })
 
 export default DisplayPlaylist;
+
+// 

@@ -6,7 +6,7 @@ import SingleSong from 'SingleSong';
 const DisplayAllSongs = React.createClass({
   componentDidMount: function() {
     $.ajax({
-      url: '/api/songs/',
+      url: '/api/songs/populated',
       type: 'GET'
     })
     .done(function(songs) {
@@ -15,19 +15,20 @@ const DisplayAllSongs = React.createClass({
     })
   },
 
+  handleClick: function() {
+    console.log('song test')
+  },
+
   render: function() {
     console.log('SONGS:', this.props.songs)
     return (
       <div>
         <h5>All Songs:</h5>
-        <form>
-          <input list="songs" name="song"/>
-          <datalist id="songs">
+          <ul id="songs">
             {this.props.songs ? this.props.songs.map(function(val, idx) {
-              return <SingleSong key={idx} artistId={val.ArtistId} albumId={val.ProjectId} songId={val.id} title={val.title}/>
-            }) : null}
-          </datalist>
-        </form>
+              return <SingleSong key={idx} artist={val.Artist.name} artistId={val.ArtistId} albumId={val.ProjectId} songId={val.id} title={val.title} handleSongClick={this.handleClick}/>
+            }, this) : null}
+          </ul>
       </div>
     )
   }
