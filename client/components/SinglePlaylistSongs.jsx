@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SinglePlaylistSongs = props => {
-  console.log('PROPS:', props.currentPlaylist)
+  // console.log('PROPS:', props.currentPlaylist)
   
   let playlistSongs;
 

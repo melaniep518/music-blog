@@ -20,7 +20,7 @@ const DisplayPlaylist = React.createClass({
   },
 
   handleClick: function(playlistData, e) {
-    console.log(playlistData);
+    // console.log(playlistData);
     $.ajax({
       url: '/api/playlists/songs/' + playlistData.id,
       type: 'GET'
