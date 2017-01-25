@@ -26,7 +26,7 @@ const DisplayPlaylist = React.createClass({
       type: 'GET'
     })
     .done(function(playlist) {
-      console.log(playlist)
+      // console.log(playlist)
       let id = playlistData.id;
       let title = playlistData.title;
       updateCurrentPlaylist(playlist, title, id);
